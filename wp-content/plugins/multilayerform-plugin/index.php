@@ -14,7 +14,6 @@ function multi_steps_form ()
 {
      $content = '';
     $content .= '<div id="overlay">';
-    $content .= '</div>';
     $content .= '<div class="login-form">';
     $content .= '<div class="popupCloseButton">X</div>';
     $content .= '<form id="regForm" action=" ">';
@@ -60,8 +59,9 @@ function multi_steps_form ()
     $content .= '<span class="step"></span>';
     $content .= '</div>';
     
-    $content .= '</form>';
-  	$content .= '</div>';
+     $content .= '</form>';
+     $content .= '</div>';
+     $content .= '</div>';
     
     return $content;
 }

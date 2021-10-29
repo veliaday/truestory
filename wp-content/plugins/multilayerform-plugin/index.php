@@ -3,7 +3,7 @@
 * Plugin Name: Multilayer Form Popup Plugin
 * Plugin URI: http://localhost/
 * Description: This is a Multilayer Form Popup plugin to get the users attention and connect them with their interests for a specific company. The plugin was based on HTML5, CSS, JS and PHP
-* Version: 2.0.1
+* Version: 2.0.3
 * Author: Murat Kilic
 * Author URI: http://localhost/
 * License: GPL2
@@ -79,7 +79,7 @@ function multi_steps_form ()
         
         wp_enqueue_style('CustomFontMontserrat','https://fonts.googleapis.com/css?family=Montserrat:400,500,800&display=swap');
         
-        wp_enqueue_style('CustomStylesheet', plugins_url('multilayerform-plugin/css/style.css'));
+        wp_enqueue_style('CustomStylesheet', plugins_url('multilayerform-plugin/css/style.css'),"2.0.3");
         
         wp_deregister_script('jquery');
         

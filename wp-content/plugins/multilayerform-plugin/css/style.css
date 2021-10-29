@@ -12,7 +12,18 @@
 	align-items: center;
 }
 
+#regForm .tab button {
+  
+  background-color: #6e539e !important;
+  
 
+}
+
+#regForm .tab button:hover {
+  
+  background-color: #b394eb !important;
+  
+}
 
 .login-form {
     z-index: 1000;
@@ -92,7 +103,7 @@ input[type="button"] {
 }
 
 input[type="submit"] {
-  	width: 100%;
+    width: 100%;
     height: 50px;
     background: #4bb9b4 !important;
     font-size: 16px;

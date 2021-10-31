@@ -62,7 +62,15 @@ function multi_steps_form ()
      $content .= '</form>';
      $content .= '</div>';
      $content .= '</div>';
-    
+     $content .= '<button id="knappen">';
+     $content .= "Her";
+     $content .= '</button>'; 
+     
+     
+     
+     
+     
+     
     return $content;
 }
 

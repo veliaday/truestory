@@ -12,6 +12,22 @@
 	align-items: center;
 }
 
+
+#knappen {
+	
+position: fixed;
+width: 60px;
+height: 60px;
+bottom: 40px;
+right: 40px;
+border-radius: 999px;
+	
+}
+
+
+
+
+
 #regForm .tab button {
   
   background-color: #6e539e !important;

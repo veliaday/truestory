@@ -1,48 +1,34 @@
-jQuery(document).ready(function( $ ) {
-  $('.popupCloseButton').on('click', function() {
-    $('#overlay').hide();
-  })
-});
-
-jQuery(document).ready(function( $ ) {
-  $('.popupCloseButton').on('click', function() {
-    $('.login-form').hide();
-  })
-});
-
-
-jQuery(document).ready(function( $ ) {
-  $('.submitBtn').on('click', function() {
-    $('.login-form').hide();
-  })
-});
-
-jQuery(document).ready(function( $ ) {
-  $('.submitBtn').on('click', function() {
-    $('.#overlay').hide();
-  })
-});
-
-
-
-
-var currentTab = 0; // Current tab is set to be the first tab (0)
-var knappen = document.getElementById("knappen");
-knappen.addEventListener("click",()=>{
-showTab(currentTab); // Display the current tab
-}
-
-
 function showTab(n) {
   // This function will display the specified tab of the form ...
   var x = document.getElementsByClassName("tab");
-  x[n].style.display = "block";
-  // ... and fix the Previous/Next buttons:
-  if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
+  if (x[0] == x[n]) {
+  
+  x[0].style.display ="block";  
   } else {
-    document.getElementById("prevBtn").style.display = "inline";
+  
+   x[0].style.display ="none";
+  
   }
+  
+   if (x[1] == x[n]) {
+  
+  x[1].style.display ="block";  
+  } else {
+  
+   x[1].style.display ="none";
+  
+  }
+  
+   if (x[2] == x[n]) {
+  
+  x[2].style.display ="block";  
+  } else {
+  
+   x[2].style.display ="none";
+  
+  }
+  
+  // ... and fix the Previous/Next buttons:
   if (n == (x.length - 1)) {
     document.getElementById("nextBtn").innerHTML = "Submit";
   } else {
@@ -51,6 +37,25 @@ function showTab(n) {
   // ... and run a function that displays the correct step indicator:
   fixStepIndicator(n)
 }
+
+var popupshowing = false;
+var currentTab = 0; // Current tab is set to be the first tab (0)
+document.getElementById("knappen").addEventListener("click", function() {
+if (popupshowing == false )  {
+  document.getElementById("overlay").style.visibility = "visible";
+  popupshowing = true;
+  showTab(currentTab);
+  
+} 
+});
+
+document.getElementById("popupclose").addEventListener("click", function() {
+if (popupshowing == true )  {
+  document.getElementById("overlay").style.visibility = "hidden";
+  popupshowing = false;
+} 
+});
+
 
 function nextPrev(n) {
   // This function will figure out which tab to display
@@ -102,3 +107,11 @@ function fixStepIndicator(n) {
   //... and adds the "active" class to the current step:
   x[n].className += " active";
 }
+
+
+document.getElementById("step1").addEventListener("click",()=>showTab(0))
+document.getElementById("step2").addEventListener("click",()=>showTab(1))
+document.getElementById("step3").addEventListener("click",()=>showTab(2))
+
+
+

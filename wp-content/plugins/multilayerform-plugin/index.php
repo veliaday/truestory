@@ -3,7 +3,7 @@
 * Plugin Name: Multilayer Form Popup Plugin
 * Plugin URI: http://localhost/
 * Description: This is a Multilayer Form Popup plugin to get the users attention and connect them with their interests for a specific company. The plugin was based on HTML5, CSS, JS and PHP
-* Version: 2.0.3
+* Version: 2.0.4
 * Author: Murat Kilic
 * Author URI: http://localhost/
 * License: GPL2
@@ -15,7 +15,7 @@ function multi_steps_form ()
      $content = '';
     $content .= '<div id="overlay">';
     $content .= '<div class="login-form">';
-    $content .= '<div class="popupCloseButton">X</div>';
+    $content .= '<div id="popupclose" class="popupCloseButton">X</div>';
     $content .= '<form id="regForm" action=" ">';
     
     $content .= '<div class="tab">';
@@ -54,9 +54,9 @@ function multi_steps_form ()
     $content .= '</div>';
     
     $content .= '<div style="text-align:center;margin-top:40px;">';
-    $content .= '<span class="step"></span>';
-    $content .= '<span class="step"></span>';
-    $content .= '<span class="step"></span>';
+    $content .= '<span id="step1" class="step"></span>';
+    $content .= '<span id="step2" class="step"></span>';
+    $content .= '<span id="step3" class="step"></span>';
     $content .= '</div>';
     
      $content .= '</form>';
@@ -87,13 +87,10 @@ function multi_steps_form ()
         
         wp_enqueue_style('CustomFontMontserrat','https://fonts.googleapis.com/css?family=Montserrat:400,500,800&display=swap');
         
-        wp_enqueue_style('CustomStylesheet', plugins_url('multilayerform-plugin/css/style.css'),"2.0.3");
-        
-        wp_deregister_script('jquery');
-        
-        wp_enqueue_script('jquery','https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
+        wp_enqueue_style('CustomStylesheet', plugins_url('multilayerform-plugin/css/style.css'),"all");
         
         wp_enqueue_script('CustomScript', plugins_url('multilayerform-plugin/js/script.js'), array('jquery'), null, true);
     }
 
 ?>
+

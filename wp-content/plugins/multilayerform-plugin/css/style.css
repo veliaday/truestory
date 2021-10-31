@@ -1,5 +1,6 @@
 #overlay {
     position: fixed;
+  	visibility: hidden;
 	background-color: rgba(0,0,0,0.7);
 	background-repeat: repeat;
 	top: 0;
@@ -15,17 +16,15 @@
 
 #knappen {
 	
-position: fixed;
-width: 60px;
-height: 60px;
-bottom: 40px;
-right: 40px;
-border-radius: 999px;
+position: fixed !important;
+width: 60px !important;
+height: 60px !important;
+bottom: 40px !important;
+right: 40px !important;
+border-radius: 999px !important;
+z-index: 999 !important;  
 	
 }
-
-
-
 
 
 #regForm .tab button {
@@ -37,7 +36,7 @@ border-radius: 999px;
 
 #regForm .tab button:hover {
   
-  background-color: #3b2268 !important;
+  background-color: #b394eb !important;
   
 }
 
@@ -97,7 +96,7 @@ input[type="email"]:focus {
   /*  border: 2px solid #4bb9b4 !important; */
 }
 
-.fas {
+#overlay .fas {
     position: absolute !important;
     right: 10px !important;
     top: 0px !important;
@@ -310,4 +309,5 @@ input.invalid {
     margin-top: 5px;
     padding: 20px;
 }
+
 

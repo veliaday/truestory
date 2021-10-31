@@ -11,3 +11,20 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  astrachildtheme
 */
+
+
+.crt-feed-window {
+	height: 100% !important;
+}
+
+.crt-widget .crt-grid-post .crt-post-hover {
+	background-color: #e7e7e7 !important;
+}
+
+.crt-widget .crt-grid-post .crt-post-hover {
+	background-color: #e7e7e7 !important;
+}
+
+.crt-grid-post .crt-post-hover {
+	background-color: #e7e7e7 !important;
+}

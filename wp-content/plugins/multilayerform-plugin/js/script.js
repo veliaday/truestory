@@ -27,7 +27,11 @@ jQuery(document).ready(function( $ ) {
 
 
 var currentTab = 0; // Current tab is set to be the first tab (0)
+var knappen = document.getElementById("knappen");
+knappen.addEventListener("click",()=>{
 showTab(currentTab); // Display the current tab
+}
+
 
 function showTab(n) {
   // This function will display the specified tab of the form ...

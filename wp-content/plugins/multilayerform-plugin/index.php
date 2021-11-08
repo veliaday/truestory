@@ -12,7 +12,6 @@
 
 function multi_steps_form ()
 {
-     $content = '';
     $content .= '<div id="overlay">';
     $content .= '<div class="login-form">';
     $content .= '<div id="popupclose" class="popupCloseButton">X</div>';
@@ -20,31 +19,32 @@ function multi_steps_form ()
     
     $content .= '<div class="tab">';
     $content .= '<h3 id="headline-text">Hvad er dine interesser?</h3>';
-    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Musik</button>';
-    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Sport</button>';
-    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Økonomi</button>';
-    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Psykologi</button>';
-    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Kemi</button>';
+    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Adrenalin</button>';
+    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Smag</button>';
+    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Kultur</button>';
+    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Wellness & Spa</button>';
+    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Natur</button>';
+    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Ophold</button>';
     
     $content .= '</div>';
     
     $content .= '<div class="tab">';
-    $content .= '<h3 id="headline-text">Hvad vil du gerne arbejde med i fremtiden?</h3>';
-    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Noget med mennesker</button>';
-    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Handel og økonomi</button>';
-    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Gastronomi</button>';
-    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Bruge min hænder</button>';
-    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Jeg ved det ikke</button>';
+    $content .= '<h3 id="headline-text">Hvem vil du helst opleve det sammen med?</h3>';
+    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Familie</button>';
+    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Kæreste</button>';
+    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Venner/Veninder</button>';
+    $content .= '<button type="button" id="nextBtn" onclick="nextPrev(1)">Date</button>';
+  
     $content .= '</div>';
     
     $content .= '<div class="tab">';
-    $content .= '<h3 id="headline-text">Har du svært ved at finde den rigtige studieretning?</h3>';
-    $content .= '<p id="p-text">Skriv din mail og modtag en skræddersyet studieretning som matcher dine interesser.</p>';
+    $content .= '<h3 id="headline-text">Tilmeld dig nyhedsbrevet og få 10% på første oplevelse.</h3>';
+    $content .= '<p id="p-text">Få inspiration til oplevelser direkte i indbakken.</p>';
     $content .= '<p><input placeholder="Fornavn..." oninput="this.className = "></p>';
     $content .= '<div class="input">';
-    $content .= '<input type="email" name="email" id="email" placeholder="Skriv din email her..." required><i class="fas fa-envelope"></i>';
+    $content .= '<input type="email" name="email" id="email" placeholder="Skriv din email" required>';
     $content .= '</div>';
-    $content .= '<button type="button" id="nextBtn" class="submitbtn" onclick="nextPrev(1)">Send mig spændende tilbud</button>';
+    $content .= '<button type="button" id="nextBtn" class="submitbtn" onclick="nextPrev(1)">Tilmeld</button>';
     $content .= '</div>';
     
     $content .= '<div style="overflow:auto;">';
@@ -66,10 +66,7 @@ function multi_steps_form ()
      $content .= '<i class="fas fa-bell"></i>';
      $content .= '</button>'; 
      
-     
-     
-     
-     
+
      
     return $content;
 }
@@ -92,5 +89,5 @@ function multi_steps_form ()
         wp_enqueue_script('CustomScript', plugins_url('multilayerform-plugin/js/script.js'), array('jquery'), null, true);
     }
 
-?>
 
+?>

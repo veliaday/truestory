@@ -28,12 +28,17 @@ function showTab(n) {
   
   }
   
-  // ... and fix the Previous/Next buttons:
-  if (n == (x.length - 1)) {
+ 
+    document.getElementById("nextBtn").style.display = "none";
+
+ 
+    if (n == (x.length - 1)) {
     document.getElementById("nextBtn").innerHTML = "Submit";
   } else {
     document.getElementById("nextBtn").innerHTML = "Next";
   }
+
+
   // ... and run a function that displays the correct step indicator:
   fixStepIndicator(n)
 }
@@ -112,6 +117,5 @@ function fixStepIndicator(n) {
 document.getElementById("step1").addEventListener("click",()=>showTab(0))
 document.getElementById("step2").addEventListener("click",()=>showTab(1))
 document.getElementById("step3").addEventListener("click",()=>showTab(2))
-
 
 
